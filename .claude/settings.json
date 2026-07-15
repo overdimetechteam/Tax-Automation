@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//c/Users/Viraj/Documents/TAX_AUTOMATION/backend/**)",
+      "Read(//c/Users/Viraj/Documents/TAX_AUTOMATION/frontend/src/pages/client//**)",
+      "Read(//c/Users/Viraj/Documents/TAX_AUTOMATION/frontend/src/**)",
+      "Bash(python manage.py shell)",
+      "Bash(python manage.py migrate tax_forms 0008_seed_system_settings)",
+      "Read(//c/Users/Viraj/Documents/TAX_AUTOMATION/**)",
+      "Read(//c/Users/Viraj/Documents/TAX_AUTOMATION/backend/apps/tax_forms/**)"
+    ]
+  }
+}
