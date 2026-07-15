@@ -1,0 +1,121 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #0a0a0a;
+    color: #ffffff;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #141414;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #2a2a2a;
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #F5C518;
+  }
+
+}
+
+@layer components {
+  .card {
+    @apply bg-brand-black-light border border-brand-gray-border rounded-xl p-6 shadow-card;
+  }
+
+  .btn-primary {
+    @apply bg-brand-yellow text-brand-black font-semibold px-5 py-2.5 rounded-lg
+           hover:bg-brand-yellow-light transition-all duration-200 disabled:opacity-50
+           disabled:cursor-not-allowed flex items-center gap-2 text-sm;
+  }
+
+  .btn-secondary {
+    @apply bg-brand-black-soft text-white font-medium px-5 py-2.5 rounded-lg
+           hover:bg-brand-black-mid border border-brand-gray-border transition-all duration-200
+           disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2 text-sm;
+  }
+
+  .btn-danger {
+    @apply bg-brand-red text-white font-semibold px-5 py-2.5 rounded-lg
+           hover:bg-brand-red-light transition-all duration-200 disabled:opacity-50
+           disabled:cursor-not-allowed flex items-center gap-2 text-sm;
+  }
+
+  .btn-ghost {
+    @apply text-brand-gray hover:text-white font-medium px-4 py-2 rounded-lg
+           hover:bg-brand-black-soft transition-all duration-200 flex items-center gap-2 text-sm;
+  }
+
+  .input-field {
+    @apply w-full bg-brand-black-soft border border-brand-gray-border rounded-lg px-4 py-2.5
+           text-white placeholder-brand-gray text-sm focus:outline-none focus:border-brand-yellow
+           focus:ring-1 focus:ring-brand-yellow transition-all duration-200;
+  }
+
+  .input-label {
+    @apply block text-sm font-medium text-brand-gray mb-1.5;
+  }
+
+  .section-header {
+    @apply text-lg font-semibold text-white border-b border-brand-gray-border pb-3 mb-6
+           flex items-center gap-2;
+  }
+
+  .status-badge {
+    @apply inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-medium;
+  }
+
+  .table-header {
+    @apply bg-brand-black text-brand-yellow text-xs font-semibold uppercase tracking-wider px-4 py-3;
+  }
+
+  .table-row {
+    @apply border-b border-brand-gray-border hover:bg-brand-black-mid transition-colors duration-150;
+  }
+
+  .table-cell {
+    @apply px-4 py-3.5 text-sm text-white;
+  }
+
+  .sidebar-item {
+    @apply flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium
+           transition-all duration-200 cursor-pointer;
+  }
+
+  .sidebar-item-active {
+    @apply bg-brand-yellow text-brand-black;
+  }
+
+  .sidebar-item-inactive {
+    @apply text-brand-gray hover:text-white hover:bg-brand-black-soft;
+  }
+
+  .form-section {
+    @apply card mb-6 animate-fade-in;
+  }
+
+  .amount-display {
+    @apply font-mono text-right;
+  }
+}
